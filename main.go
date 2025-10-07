@@ -25,5 +25,6 @@ func main() {
 	fmt.Println("LongestCommonPrefix is ", longestCommon)
 	digits := base1.PlusOne([]int{0}) // 第四题 公共前缀
 	fmt.Println("PlusOne result is ", digits)
-
+	num := base1.RemoveDuplicates([]int{0, 0, 1, 1, 1, 2, 2, 3, 3, 4}) // 第四题 公共前缀
+	fmt.Println("RemoveDuplicates num is ", num)
 }

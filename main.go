@@ -23,8 +23,10 @@ func main() {
 	fmt.Println("IsValid is ", isvalide)
 	longestCommon := base1.LongestCommonPrefix([]string{"aaa", "aa", "aaa"}) // 第四题 公共前缀
 	fmt.Println("LongestCommonPrefix is ", longestCommon)
-	digits := base1.PlusOne([]int{0}) // 第四题 公共前缀
+	digits := base1.PlusOne([]int{0}) // 第五题 加一
 	fmt.Println("PlusOne result is ", digits)
-	num := base1.RemoveDuplicates([]int{0, 0, 1, 1, 1, 2, 2, 3, 3, 4}) // 第四题 公共前缀
+	num := base1.RemoveDuplicates([]int{0, 0, 1, 1, 1, 2, 2, 3, 3, 4}) // 第六题 去重
 	fmt.Println("RemoveDuplicates num is ", num)
+	mergeArr := base1.Merge([][]int{{4, 5}, {1, 4}, {0, 1}}) // 第七题 合并区间
+	fmt.Println("mergeArr is ", mergeArr)
 }

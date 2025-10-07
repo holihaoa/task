@@ -29,4 +29,6 @@ func main() {
 	fmt.Println("RemoveDuplicates num is ", num)
 	mergeArr := base1.Merge([][]int{{4, 5}, {1, 4}, {0, 1}}) // 第七题 合并区间
 	fmt.Println("mergeArr is ", mergeArr)
+	twosum := base1.TwoSum([]int{1, 6142, 8192, 10239}, 18431) // 第八题 两数之和
+	fmt.Println("twosum is ", twosum)
 }

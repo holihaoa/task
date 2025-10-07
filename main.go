@@ -20,6 +20,12 @@ func init() {
 func main() {
 	onceNumber := base1.GetOnceNumber(nums)
 	fmt.Println("getOnceNumber is ", onceNumber)
+	ispalindrome := base1.IsPalindrome(0)
+	fmt.Println("IsPalindrome is ", ispalindrome)
+	isvalide := base1.IsValid("(]")
+	fmt.Println("IsValid is ", isvalide)
+	longestCommon := base1.LongestCommonPrefix([]string{"flower", "flow", "flight"})
+	fmt.Println("LongestCommonPrefix is ", longestCommon)
 }
 
 func getMainVar() string {

@@ -24,7 +24,7 @@ func main() {
 	fmt.Println("IsPalindrome is ", ispalindrome)
 	isvalide := base1.IsValid("(]")
 	fmt.Println("IsValid is ", isvalide)
-	longestCommon := base1.LongestCommonPrefix([]string{"flower", "flow", "flight"})
+	longestCommon := base1.LongestCommonPrefix([]string{"aaa", "aa", "aaa"})
 	fmt.Println("LongestCommonPrefix is ", longestCommon)
 }
 

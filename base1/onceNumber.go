@@ -4,15 +4,30 @@ import (
 	"fmt"
 )
 
-const PkgName string = "pkg1"
+const PkgName string = "base1"
 
-var PkgNameVar string = getPkgName()
-
-func init() {
-	fmt.Println("pkg1 init method invoked")
+// 自己的解法
+func GetOnceNumber(nums [5]int) int {
+	var count map[int]int = make(map[int]int)
+	fmt.Println(nums)
+	for index := range nums {
+		a := nums[index]
+		value := count[a]
+		count[a] = value + 1
+	}
+	for index, value := range count {
+		if value == 1 {
+			return index
+		}
+	}
+	return -1
 }
 
-func getPkgName() string {
-	fmt.Println("pkg1.PkgNameVar has been initialized")
-	return PkgName
+// 官方的解法
+func singleNumber(nums []int) int {
+	single := 0
+	for _, num := range nums {
+		single ^= num
+	}
+	return single
 }

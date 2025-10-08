@@ -3,7 +3,8 @@ package main
 import (
 	"fmt"
 
-	"github.com/holihaoa/task/base1"
+	"github.com/holihaoa/task/base2"
+	_ "github.com/holihaoa/task/base2"
 )
 
 const mainName string = "main"
@@ -15,7 +16,8 @@ func init() {
 }
 
 func main() {
-	onceNumber := base1.GetOnceNumber(nums) // 第一题 只出现一次的数字
+	// 任务一
+	/*onceNumber := base1.GetOnceNumber(nums) // 第一题 只出现一次的数字
 	fmt.Println("getOnceNumber is ", onceNumber)
 	ispalindrome := base1.IsPalindrome(0) // 第二题 回文数
 	fmt.Println("IsPalindrome is ", ispalindrome)
@@ -30,5 +32,14 @@ func main() {
 	mergeArr := base1.Merge([][]int{{4, 5}, {1, 4}, {0, 1}}) // 第七题 合并区间
 	fmt.Println("mergeArr is ", mergeArr)
 	twosum := base1.TwoSum([]int{1, 6142, 8192, 10239}, 18431) // 第八题 两数之和
-	fmt.Println("twosum is ", twosum)
+	fmt.Println("twosum is ", twosum)*/
+
+	// 任务二
+	intParam := 23
+	intResult := base2.SetIntValue(&intParam)
+	fmt.Println("Pointer change value result is", intResult)
+
+	slideValue := []int{1, 2, 3}
+	slideResult := base2.SetIntSlideValue(&slideValue)
+	fmt.Println("Pointer change slide value result is", slideResult)
 }

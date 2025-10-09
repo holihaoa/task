@@ -2,6 +2,7 @@ package main
 
 import (
 	"fmt"
+	"time"
 
 	"github.com/holihaoa/task/base1"
 	"github.com/holihaoa/task/base2"
@@ -20,7 +21,7 @@ func main() {
 	//task1()
 
 	// 任务二
-	/*intParam := 23
+	intParam := 23
 	intResult := base2.SetIntValue(&intParam) // 指针一任务,通过指针修改int值
 	fmt.Println("Pointer change value result is", intResult)
 
@@ -29,9 +30,25 @@ func main() {
 	fmt.Println("Pointer change slide value result is", slideResult)
 
 	base2.GoroutineTask1() // 协程一任务,分为两个协程分别打印奇偶数
-	time.Sleep(time.Second)*/
+	time.Sleep(time.Second)
 
-	/*// 协程任务二,任务调度器
+	// 协程任务二,任务调度器
+	GoroutineT2()
+
+	base2.OopTask1() // 面向对象任务一
+
+	base2.OopTask2() // 面向对象任务二
+
+	base2.ChannelTask1() // 通道任务一
+
+	base2.ChannelTask2() // 通道任务二
+
+	base2.LockTask1() //锁任务一
+
+	base2.LockTask2() // 锁任务二
+}
+
+func GoroutineT2() {
 	taskQ := base2.TaskQueue{Tasks: make([]base2.Task, 0)}
 	taskQ.Tasks = append(taskQ.Tasks, base2.Task{Name: "task1", Work: func() {
 		println("work1 is working")
@@ -48,15 +65,7 @@ func main() {
 	timeCostResult := base2.GoroutineTask2(taskQ)
 	for _, value := range timeCostResult {
 		fmt.Printf("task %s cost result is %s \n", value.TaskName, value.Duration)
-	}*/
-
-	/*base2.OopTask1() // 面向对象任务一
-
-	base2.OopTask2() // 面向对象任务二*/
-
-	//base2.ChannelTask1() // 通道任务一
-
-	base2.ChannelTask2()
+	}
 }
 
 func task1() {

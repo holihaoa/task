@@ -50,10 +50,13 @@ func main() {
 		fmt.Printf("task %s cost result is %s \n", value.TaskName, value.Duration)
 	}*/
 
-	base2.OopTask1() // 面向对象任务一
+	/*base2.OopTask1() // 面向对象任务一
 
-	base2.OopTask2() // 面向对象任务二
+	base2.OopTask2() // 面向对象任务二*/
 
+	//base2.ChannelTask1() // 通道任务一
+
+	base2.ChannelTask2()
 }
 
 func task1() {

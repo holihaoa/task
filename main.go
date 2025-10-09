@@ -2,7 +2,6 @@ package main
 
 import (
 	"fmt"
-	"time"
 
 	"github.com/holihaoa/task/base1"
 	"github.com/holihaoa/task/base2"
@@ -32,7 +31,7 @@ func main() {
 	base2.GoroutineTask1() // 协程一任务,分为两个协程分别打印奇偶数
 	time.Sleep(time.Second)*/
 
-	// 协程任务二,任务调度器
+	/*// 协程任务二,任务调度器
 	taskQ := base2.TaskQueue{Tasks: make([]base2.Task, 0)}
 	taskQ.Tasks = append(taskQ.Tasks, base2.Task{Name: "task1", Work: func() {
 		println("work1 is working")
@@ -49,7 +48,12 @@ func main() {
 	timeCostResult := base2.GoroutineTask2(taskQ)
 	for _, value := range timeCostResult {
 		fmt.Printf("task %s cost result is %s \n", value.TaskName, value.Duration)
-	}
+	}*/
+
+	base2.OopTask1() // 面向对象任务一
+
+	base2.OopTask2() // 面向对象任务二
+
 }
 
 func task1() {

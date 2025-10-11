@@ -36,7 +36,9 @@ func main() {
 	//task2()
 
 	// 任务三
-	base3.CrudBase(db)
+	//base3.CrudBase(db)
+
+	base3.CrudBase2(db, 1, 2, 100)
 
 }
 

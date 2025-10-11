@@ -7,6 +7,10 @@ import (
 	"github.com/holihaoa/task/base1"
 	"github.com/holihaoa/task/base2"
 	_ "github.com/holihaoa/task/base2"
+	"github.com/holihaoa/task/base3"
+	_ "github.com/holihaoa/task/base3"
+	"gorm.io/driver/mysql"
+	"gorm.io/gorm"
 )
 
 const mainName string = "main"
@@ -14,13 +18,29 @@ const mainName string = "main"
 var nums [5]int = [5]int{1, 1, 3, 2, 2}
 
 func init() {
+
 }
 
 func main() {
+	dsn := "root:0521@tcp(127.0.0.1:3306)/gotest?charset=utf8mb4&parseTime=True&loc=Local"
+	db, err := gorm.Open(mysql.Open(dsn), &gorm.Config{})
+
+	if err != nil {
+		fmt.Println(err)
+	}
+
 	// 任务一
 	//task1()
 
 	// 任务二
+	//task2()
+
+	// 任务三
+	base3.CrudBase(db)
+
+}
+
+func task2() {
 	intParam := 23
 	intResult := base2.SetIntValue(&intParam) // 指针一任务,通过指针修改int值
 	fmt.Println("Pointer change value result is", intResult)
